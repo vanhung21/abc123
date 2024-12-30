@@ -1,0 +1,441 @@
+#myAudio {
+  display: none;
+}
+
+#myForm {
+  display: none;
+}
+
+#playButton {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: cursive;
+  font-size: 15px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #aba4a4;
+  background-color: #fff;
+  transition: 0.25s;
+  border-radius: 6px;
+  margin-top: 80px;
+}
+
+#playButton:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    z-index: -1;
+  }
+  
+  .firework {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: #fff;
+    border-radius: 50%;
+    animation: explode 2s ease-in-out infinite;
+  }
+  
+  @keyframes explode {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  /* Firework */
+  
+  .timeline {
+    position: relative;
+  }
+  
+  .timeline-item {
+    position: relative;
+  }
+  
+  .timeline-date {
+    position: relative;
+    cursor: pointer;
+    left: 20%;
+  }
+  
+  .timeline-details {
+    position: relative;
+    left: 25%;
+    display: none;
+    color: white;
+  }
+  
+  .timeline-details img,
+  .timeline-details p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+  }
+  
+  .timeline-content {
+    color: white;
+    margin-top: 30px;
+  }
+  
+  .section-timeline {
+    height: 200px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  h1 {
+    line-height: 1.8;
+    font-size: 80px;
+    font-family: Brush Script MT;
+    color: #d8bfd8;
+    font-weight: 500;
+    animation: shimmer 5s infinite;
+    filter: blur(0px);
+  }
+  
+  @keyframes shimmer {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+      filter: blur(6px);
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0px);
+      transform: scale(1);
+    }
+  }
+  
+  span#hightlight {
+    color: greenyellow;
+  }
+  
+  .message {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-family: Courier new;
+  }
+  h3 {
+    line-height: 3;
+    text-decoration: underline;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  .my-image {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8));
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+  }
+  /* Timeline */
+  
+  * {
+    margin: 0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  .bg-img-base {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .card-center {
+    position: relative;
+    min-height: 500px;
+  }
+
+  .textinCard {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .card-packaging {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    min-height: 500px;
+    box-shadow: 0 0 6px 2px #926c6c;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .card .open {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -7px;
+    transition: 0.3s;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+  
+  .card .open:hover {
+    right: -10px;
+    transition: 0.3s;
+  }
+  
+  .card .open-tail {
+    position: relative;
+    height: 36px;
+    width: 30px;
+    float: left;
+  }
+  
+  .card .open-tail:before {
+    content: "";
+    display: block;
+    border-top: 18px solid #d24242;
+    border-left: 30px solid transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .card .open-tail:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    border-top: 18px solid transparent;
+    border-right: 30px solid #d24242;
+  }
+  
+  .card .open-main {
+    display: inline-block;
+    line-height: 36px;
+    background: #d24242;
+    padding: 0 3px 0 0;
+  }
+  
+  .card .open-title {
+    display: inline-block;
+    line-height: 34px;
+    border-top: 1px dashed white;
+    border-bottom: 1px dashed white;
+    padding: 0 15px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .card--first,
+  .card--third {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: all 0.9s;
+    transform-style: preserve-3d;
+    z-index: 2;
+    box-shadow: 2px 0 6px 2px #926c6c;
+  }
+  
+  .card--first {
+    transition-delay: 0.4s;
+  }
+  
+  .card--third {
+    z-index: 1;
+    transform-origin: right;
+    transition: all 0.9s;
+    box-shadow: -2px 0 6px 2px #926c6c;
+  }
+  
+  .card-packaging.is-open .card--first {
+    transform: rotateY(180deg);
+    transition: all 0.9s;
+  }
+  
+  .card-packaging.is-open .card--third {
+    transform: rotateY(180deg);
+    transition: all 0.9s;
+    transition-delay: 0.4s;
+  }
+  
+  .card-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 15px 25px;
+  }
+  
+  .card-wrapper.back {
+    transform: rotateY(180deg);
+  }
+  
+  .close {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .section-card.active {
+    display: block;
+  }
+  
+  .section-card {
+    display: none;
+  }
+  /* Card */
+  
+  #showCardButton {
+    font: cursive;
+    font-size: 15px;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #aba4a4;
+    background-color: #fff;
+    transition: 0.25s;
+    border-radius: 6px;
+  }
+  
+  #showCardButton:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .ketqua {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: cursive;
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #aba4a4;
+    background-color: #fff;
+    transition: 0.25s;
+    border-radius: 6px;
+    margin-top: 80px;
+  }
+  
+  #ketqua:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  /* Button */
+  
+  :root {
+    --pink-color: #e26e70;
+  }
+  
+  .modal_hide {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 425px;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: showModal linear 0.2s;
+    background: #fff;
+  }
+  
+  @keyframes showModal {
+    from {
+      top: -200px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  .modal_header {
+    background-color: var(--pink-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 20px;
+  }
+  
+  .modal-content {
+    color: black;
+    text-align: center;
+    padding: 15px;
+    width: 400px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+  }
+  
+  .button-container button {
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--pink-color);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .result {
+    display: none;
+  }
+  
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  /* Modal */
+  

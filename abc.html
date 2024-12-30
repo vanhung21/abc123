@@ -1,0 +1,148 @@
+<html>
+
+<head>
+  <title>Anniversary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Bắt đầu timeline -->
+  <section class="section-timeline">
+    <div class="fireworks"></div>
+    <div class="timeline">
+      <div class="title">
+        <h1><span>Anniversary day</span></h1>
+      </div>
+      <div class="message">
+        <h2><span id="hightlight">Message gửi đến Mai meo</span></h2>
+      </div>
+      <button id="playButton">Start nàooooo</button>
+      <audio controls id="myAudio" loop>
+        <source src="C:\Users\PC Huy\Downloads\YeuEmRatNhieu-HoangTon-7031755.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <form id="myForm">
+        <div class="timeline-item">
+          <h3 class="timeline-content">
+            <span class="timeline-date">Câu hỏi 1</span>
+          </h3>
+          <div class="timeline-details">
+            <img src="C:\Users\PC Huy\Downloads\IMG_7631.jpg" alt="Block" class="my-image">
+            <p>Anh hôn em lần đầu tiên ở đâu?
+              <br>
+              <input type="radio" name="cauhoi1" value="a"> Cầu Hoàng Văn Thụ<br>
+              <input type="radio" name="cauhoi1" value="b"> Ở trước nhà em<br>
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-content">
+            <span class="timeline-date">Câu hỏi 2</span>
+          </h3>
+          <div class="timeline-details">
+            <img src="C:\Users\PC Huy\Downloads\IMG_8739.JPG" alt="Block" class="my-image">
+            <p>Món quà đầu tiên anh tặng em là gì?
+              <br>
+              <input type="radio" name="cauhoi2" value="a"> Nến thơm<br>
+              <input type="radio" name="cauhoi2" value="b"> Capybara<br>
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-content">
+            <span class="timeline-date">Câu hỏi 3</span>
+          </h3>
+          <div class="timeline-details">
+            <img src="C:\Users\PC Huy\Downloads\IMG_6761.JPG" alt="Block" class="my-image">
+            <p>Lần đầu tiên anh dẫn em ra mắt mọi người trong nhà anh là ngày nào?
+              <br>
+              <input type="radio" name="cauhoi3" value="a"> 08/06/2024<br>
+              <input type="radio" name="cauhoi3" value="b"> 14/6/2024<br>
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <h3 class="timeline-content">
+            <span class="timeline-date">Câu hỏi 4</span>
+          </h3>
+          <div class="timeline-details">
+            <img src="C:\Users\PC Huy\Downloads\IMG_6824.JPG" alt="Block" class="my-image">
+            <p>Lần đầu tiên em dẫn anh về ra mắt bố mẹ em là ngày nào?
+              <br>
+              <input type="radio" name="cauhoi4" value="a"> 01/07/2024<br>
+              <input type="radio" name="cauhoi4" value="b"> 22/06/2024<br>
+            </p>
+          </div>
+        </div>
+        
+        <button type="button" onclick="kiemTra()" class="ketqua" id="ketqua">Kiểm tra kết quả</button>
+      </form>
+    </div>
+  </section>
+  <!-- Kết thúc timeline -->
+
+  <!-- Bắt đầu hiển thị card -->
+  <button id="showCardButton">Click vào đây để nhận quà</button>
+  <div class="modal">
+    <div id="modal_hide" class="modal_hide">
+      <div class="modal_header">
+        <p>Chúc mừng Mai meo đã vượt qua bài kiểm tra</p>
+      </div>
+      <div class="modal-content">
+        <p>Nhưng anh vẫn còn 1 <span style="color: red;">câu hỏi quan trọng nhất</span>
+          <br>Em đồng ý kéo dài chuỗi ngày yêu nhau này thật lâu thật lâu nữa nhéeeee!!!
+          <br>Chuỗi ngày này sẽ chỉ kết thúc khi em lấy anh thôiii!!!
+        </p>
+      </div>
+      <div class="button-container">
+        <button id="yesButton">Đồng ý</button>
+        <button id="noButton">Không</button>
+      </div>
+    </div>
+  </div>
+  <div id="result" class="result">
+    <section class="section-card">
+      <div class="page-wrapper">
+        <div class="card">
+          <div class="card-packaging bg-img-base"
+            style="background-image: url(https://i.pinimg.com/originals/14/a0/e9/14a0e94090c49b036eea439cc51b40c5.gif)">
+            <div class="card-center">
+              <a class="close bg-img-base" href="#"
+                style="background-image: url(https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/close-circle-512.png)"></a>
+            </div>
+            <div class="textinCard">
+              <p>Phần thưởng của em là ngàn nụ hôn <br>từ husky mà anh tặng ahihi</p>
+            </div>
+            <div class="card--first">
+              <div class="card-wrapper bg-img-base front"
+                style="background-image: url(https://media1.giphy.com/media/FrfvK9FJUynFC/giphy.gif?cid=790b76115cd8c25f434d444955e4a1a0&rid=giphy.gif)">
+                <a class="open" href="#">
+                  <div class="open-tail"></div>
+                  <div class="open-main"><span class="open-title">Open</span></div>
+                </a>
+              </div>
+              <div class="card-wrapper bg-img-base back"
+                style="background-image: url(https://i.pinimg.com/originals/79/f3/95/79f395ccb172733bb1ee758fa227c7ea.gif)">
+              </div>
+            </div>
+            <div class="card--third">
+              <div class="card-wrapper bg-img-base front"
+                style="background-image: url(https://i.pinimg.com/originals/9f/95/d4/9f95d4e55b1c19a95cb99e622edcceaa.gif)">
+              </div>
+              <div class="card-wrapper bg-img-base back"
+                style="background-image: url(https://gifsec.com/wp-content/uploads/2022/09/happy-anniversary-gif-50.gif)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Kết thúc hiển thị card -->
+
+  <section class="section-footer">
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
